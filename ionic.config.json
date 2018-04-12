@@ -1,0 +1,8 @@
+{
+  "name": "ionicbar",
+  "app_id": "e1aa342e",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
