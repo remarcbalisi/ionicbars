@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
+import { SpecialsListsPage } from '../specials-lists/specials-lists';
+
 @IonicPage()
 @Component({
   selector: 'page-new-specials',
@@ -45,6 +47,7 @@ export class NewSpecialsPage {
       }
       this.SpecialsDataArray.push(special);
       this.storage.set('specials', JSON.stringify(this.SpecialsDataArray));
+      this.navCtrl.push(SpecialsListsPage);
   }
 
 }

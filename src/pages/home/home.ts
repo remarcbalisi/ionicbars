@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {NewSpecialsPage} from '../new-specials/new-specials';
+
+import { NewSpecialsPage } from '../new-specials/new-specials';
+import { SpecialsListsPage } from '../specials-lists/specials-lists';
 
 @Component({
   selector: 'page-home',
@@ -13,8 +15,11 @@ export class HomePage {
   }
 
   goNewSpecials(){
-    console.log("click");
     this.navCtrl.push(NewSpecialsPage);
+  }
+
+  goSpecialsLists(){
+    this.navCtrl.push(SpecialsListsPage);
   }
 
 }
