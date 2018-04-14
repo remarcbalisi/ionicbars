@@ -1,0 +1,93 @@
+<!--
+  Generated template for the NewSpecialsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>New Specials</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form (ngSubmit)="setSpecial()">
+
+        <ion-card>
+          <img src="http://via.placeholder.com/150x150"/>
+          <ion-card-content>
+              <ion-list>
+
+                <ion-item>
+                  <ion-label stacked>Take a Photo</ion-label>
+                  <ion-input type="file"></ion-input>
+                </ion-item>
+
+              </ion-list>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-content>
+              <ion-list>
+
+                <ion-item>
+                  <ion-label stacked>Spot name:</ion-label>
+                  <ion-input [(ngModel)]="spotname" name="spotname" type="text"></ion-input>
+                </ion-item>
+
+              </ion-list>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-content>
+              <ion-list>
+
+                <ion-item>
+                  <ion-label stacked>Specials name:</ion-label>
+                  <ion-input [(ngModel)]="specialsname" name="specialsname" type="text"></ion-input>
+                </ion-item>
+
+              </ion-list>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-content>
+              <ion-list>
+
+                <ion-item>
+                  <ion-label stacked>Specials description:</ion-label>
+                  <ion-textarea [(ngModel)]="specialsdescription" name="specialsdescription" rows="5"></ion-textarea>
+                </ion-item>
+
+              </ion-list>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-content>
+              <ion-list>
+
+                <ion-item>
+                    <ion-label stacked>Start time:</ion-label>
+                    <ion-input [(ngModel)]="starttime" name="starttime" type="time"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label stacked>Close time:</ion-label>
+                    <ion-input [(ngModel)]="closetime" name="closetime" type="time"></ion-input>
+                </ion-item>
+
+              </ion-list>
+          </ion-card-content>
+        </ion-card>
+
+        <button ion-button type="submit" block>Save Changes</button>
+
+    </form>
+</ion-content>
