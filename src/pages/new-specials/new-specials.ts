@@ -50,7 +50,7 @@ export class NewSpecialsPage {
 
   presentActionSheet() {
     let actionSheet = this.actionSheetCtrl.create({
-      title: 'Modify your album',
+      title: 'Take a photo',
       buttons: [
         {
           text: 'Gallery',
