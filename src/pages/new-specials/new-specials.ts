@@ -135,7 +135,8 @@ export class NewSpecialsPage {
           specialsname : this.specialsname,
           specialsdescription : this.specialsdescription,
           starttime : this.starttime,
-          closetime : this.closetime
+          closetime : this.closetime,
+          image: this.path
       }
       this.SpecialsDataArray.push(special);
       this.storage.set('specials', JSON.stringify(this.SpecialsDataArray));
