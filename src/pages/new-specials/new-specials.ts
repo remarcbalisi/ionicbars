@@ -21,6 +21,12 @@ export class NewSpecialsPage {
   specialsdescription:string;
   starttime:string;
   closetime:string;
+  pricerange:number;
+  address1:string;
+  address2:string;
+  city:string;
+  state:string;
+  zipcode:string;
   SpecialsDataArray: any;
 
   path:string;
@@ -136,6 +142,12 @@ export class NewSpecialsPage {
           specialsdescription : this.specialsdescription,
           starttime : this.starttime,
           closetime : this.closetime,
+          pricerange: this.pricerange,
+          address1: this.address1,
+          address2: this.address2,
+          city: this.city,
+          state: this.state,
+          zipcode: this.zipcode,
           image: this.path
       }
       this.SpecialsDataArray.push(special);

@@ -15,7 +15,7 @@
 
 <ion-content padding>
     <ion-card *ngFor="let special of SpecialsDataArray">
-      <img src="http://via.placeholder.com/150x150"/>
+      <img [src]=special.image/>
       <ion-card-content>
         <ion-card-title>
           {{ special.specialsname }}
