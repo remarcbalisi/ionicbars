@@ -17,13 +17,12 @@
     <form (ngSubmit)="setSpecial()">
 
         <ion-card>
-          <img src="http://via.placeholder.com/150x150"/>
+          <img [src]=path/>
           <ion-card-content>
               <ion-list>
 
                 <ion-item>
-                  <ion-label stacked>Take a Photo</ion-label>
-                  <ion-input type="file"></ion-input>
+                  <button type="button" (click)="presentActionSheet()" ion-button color="dark">Take A photo</button>
                 </ion-item>
 
               </ion-list>
@@ -87,7 +86,7 @@
           </ion-card-content>
         </ion-card>
 
-        <button ion-button type="submit" block>Save Changes</button>
+        <button id="savechanges-btn" ion-button type="submit" block>Save Changes</button>
 
     </form>
 </ion-content>
