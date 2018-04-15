@@ -5,6 +5,7 @@ import { ActionSheetController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { ImagePicker } from '@ionic-native/image-picker';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Crop } from '@ionic-native/crop';
 
 import { SpecialsListsPage } from '../specials-lists/specials-lists';
 
@@ -24,7 +25,7 @@ export class NewSpecialsPage {
 
   path:string;
 
-    constructor(public camera: Camera, public alertCtrl: AlertController, public picker: ImagePicker, public actionSheetCtrl: ActionSheetController, private storage: Storage, public navCtrl: NavController, public navParams: NavParams) {
+    constructor(public crop: Crop, public camera: Camera, public alertCtrl: AlertController, public picker: ImagePicker, public actionSheetCtrl: ActionSheetController, private storage: Storage, public navCtrl: NavController, public navParams: NavParams) {
 
       this.storage.get('specials').then((val) => {
         if( val != null ){
@@ -105,6 +106,23 @@ export class NewSpecialsPage {
 
     this.camera.getPicture(options).then(url => {
         this.path = url;
+        this.cropPicture();
+    }, err => {
+        this.showAlert("Error", err, 'OK');
+    });
+
+  }
+
+  cropPicture(){
+
+    let options = {
+        quality: 100,
+        targetHeight: 150,
+        targetWidth: 150
+    }
+
+    this.crop.crop(this.path, options).then(newImageUrl => {
+        this.path = newImageUrl;
     }, err => {
         this.showAlert("Error", err, 'OK');
     });
