@@ -95,6 +95,7 @@ export class NewSpecialsPage {
         for( var i=0; i<results.length; i++ ){
             this.path = results[i];
         }
+        this.cropPicture();
     }, err => {
         this.showAlert("Error", err, 'OK');
     });
